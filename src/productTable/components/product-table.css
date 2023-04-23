@@ -1,0 +1,6 @@
+.productTable-container{
+    display: flex;
+}
+.productTable,th.tr,td{
+    border:2px solid grey;
+}

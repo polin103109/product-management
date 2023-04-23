@@ -1,0 +1,7 @@
+.form-container{
+    display: flex;
+}
+.form-inputgrp{
+display: flex;
+gap:12px;
+}
