@@ -1,17 +1,5 @@
+import Formgroup from '../formGroup/formGroup';
 import './form.css';
-function Formgroup({
-   label,
-   fieldName,
-   type
-}){
-    return (
-        <div className='form-inputgrp'>
-        <label>{`${label}:`}</label>
-     <input name={fieldName} type={type}/>
-        </div>
-       );
-}
-
 
 function Form(){
     return (
@@ -20,6 +8,10 @@ function Form(){
           <Formgroup label="Product ID"  fieldName="id" type="number"/>
           <Formgroup label="Product Name"  fieldName="name" type="text"/>
           <Formgroup label="Product Price"  fieldName="number" type="number"/>
+          <div className='product-form-footer'>
+            <input type="reset" value="Reset"/>
+            <input type="submit" value="Submit"/>
+          </div>
         </form>
     </div>
     );
