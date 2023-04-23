@@ -4,4 +4,7 @@
 .form-inputgrp{
 display: flex;
 gap:12px;
+padding:10px;
+justify-content: space-between;
+
 }
