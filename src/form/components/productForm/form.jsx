@@ -4,15 +4,29 @@ import Formgroup from '../formGroup/formGroup';
 import './form.css';
 
 function Form( {onAddProduct}){
+  const [tableData,setTableData]= usestate([]);
   const [product,setProduct]= useState({
-    id:0,
+    id:'',
     name:"",
-    price:0,
-  });
+    price:'',
+  }
+  );
    
 function handleFormSubmit(event){
     event.preventDefault();
-    console.log(product);
+    const checkEmptyInput = !Object.values(product).every(res=>res==="")
+    if(checkEmptyInput){
+      const newData = (data) => (
+        [...data,product])
+        setTableData(newData );
+        const emptyInput = {
+          id:'',
+          name:"",
+          price:'',
+        }
+        setProduct(emptyInput )
+    }
+    }
     onAddProduct(product);
    }
 function handleOnChange(e){
