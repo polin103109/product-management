@@ -16,12 +16,15 @@ function App() {
       price: 100000000,
     },
   ];
+  function onAddProduct(newProduct) {
+    products.push(newProduct);
+  }
   return (
     <div className="App">
       <Header />
       <div className="main">
         <ProductTable products={products} />
-        <Form />
+        <Form onAddProduct={onAddProduct} />
       </div>
     </div>
   );

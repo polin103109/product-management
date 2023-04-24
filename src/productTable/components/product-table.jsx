@@ -28,7 +28,7 @@ function ProductTable (props)  {
                     <td>price</td>
                 </tr> 
                 </thead>
-            <tbody>{products.map(renderRow)}</tbody>
+            <tbody>{products.map((product)=> renderRow(product)) }</tbody>
         </table>
     </div>
     );
