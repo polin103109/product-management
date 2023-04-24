@@ -1,29 +1,23 @@
+
 import './product-table.css';
 
 
+function ProductTable (props)  {
+    const products = props.products;
 
-
-function ProductTable() {
-    const products = [
-        {
-          id: 1,
-          name: "laptop",
-          price: 1000000,
-        },
-      ];
-    
-    function renderRow(product){
+    function renderRow (product)  {
         return (
             <tr key={product.id}>
                 <td>{product.id}</td>
                 <td>{product.name}</td>
                 <td>{product.price}</td>
-    
-    
-            </tr>
-    
-        );
+         </tr>
+      );
     }
+    // if (!Array.isArray(products)) {
+    //     return <div>Products must be an array</div>;
+    // }
+    
     return (
     <div className="productTable-container">
         <table className='productTable'>
@@ -32,11 +26,9 @@ function ProductTable() {
                     <td>Product ID</td>
                     <td>Product name</td>
                     <td>price</td>
-                    <td>Edit</td>
-                    <td>Delete</td>
                 </tr> 
                 </thead>
-            <tbody>{products.map((product) => renderRow(product))}</tbody>
+            <tbody>{products.map(renderRow)}</tbody>
         </table>
     </div>
     );
