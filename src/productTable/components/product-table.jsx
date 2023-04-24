@@ -3,7 +3,15 @@ import './product-table.css';
 
 
 
-function ProductTable(products) {
+function ProductTable() {
+    const products = [
+        {
+          id: 1,
+          name: "laptop",
+          price: 1000000,
+        },
+      ];
+    
     function renderRow(product){
         return (
             <tr key={product.id}>
@@ -16,7 +24,8 @@ function ProductTable(products) {
     
         );
     }
-    return (<div className="productTable-container">
+    return (
+    <div className="productTable-container">
         <table className='productTable'>
             <thead>  
                 <tr>
