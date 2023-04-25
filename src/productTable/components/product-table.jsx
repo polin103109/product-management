@@ -1,24 +1,23 @@
 
 import './product-table.css';
 
+function ProductTable ({tableData})  {
+    let rows = [];
+    if (Array.isArray(tableData)) {
+        rows = tableData.map((data)=>
+        {
+       return (
+        <tr key={data.id}>
+        <td>{data.id}</td>
+        <td>{data.name}</td>
+        <td>{data.price}</td>
+ </tr>
+   
+   )
+})
 
-function ProductTable (props)  {
-    const products = props.products;
-
-    function renderRow (product)  {
-        return (
-            <tr key={product.id}>
-                <td>{product.id}</td>
-                <td>{product.name}</td>
-                <td>{product.price}</td>
-         </tr>
-      );
-    }
-    // if (!Array.isArray(products)) {
-    //     return <div>Products must be an array</div>;
-    // }
-    
-    return (
+}
+return (
     <div className="productTable-container">
         <table className='productTable'>
             <thead>  
@@ -28,9 +27,10 @@ function ProductTable (props)  {
                     <td>price</td>
                 </tr> 
                 </thead>
-            <tbody>{products.map((product)=> renderRow(product)) }</tbody>
+            <tbody>{rows} </tbody>
         </table>
     </div>
     );
   }
- export default ProductTable;
+
+export default ProductTable;
