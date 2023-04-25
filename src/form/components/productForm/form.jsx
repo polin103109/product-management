@@ -39,7 +39,8 @@ function handleOnChange(e){
     }
 
     return (
-    <div className="form-container">
+    <div className="total-div">
+      <div className='form-container'>
         <form class="product-form" onSubmit={handleFormSubmit}>
           <Formgroup label="Product ID"  fieldName="id" type="number" onChange={handleOnChange} value={product.id} />
           <Formgroup label="Product Name"  fieldName="name" type="text" onChange={handleOnChange} value={product.name}/>
@@ -50,7 +51,8 @@ function handleOnChange(e){
             <input type="submit" value="Submit"/>
           </div>
           </form>
-        <div>
+          </div>
+        <div className='table-data'>
         <ProductTable tableData={tableData}/>
         </div>
         </div>
