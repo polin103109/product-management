@@ -24,6 +24,11 @@ justify-content: space-between;
 .table-data{
     border: 2px solid black;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     margin-left: 20px;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+
 }

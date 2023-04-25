@@ -53,6 +53,7 @@ function handleOnChange(e){
           </form>
           </div>
         <div className='table-data'>
+          <p>Product Table</p>
         <ProductTable tableData={tableData}/>
         </div>
         </div>
