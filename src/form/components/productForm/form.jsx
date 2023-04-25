@@ -49,8 +49,10 @@ function handleOnChange(e){
             <input type="reset" value="Reset"/>
             <input type="submit" value="Submit"/>
           </div>
-          <ProductTable tableData={tableData}/>
-        </form>
+          </form>
+        <div>
+        <ProductTable tableData={tableData}/>
+        </div>
         </div>
     
     );
