@@ -1,4 +1,3 @@
-
 import './product-table.css';
 
 function ProductTable ({tableData})  {

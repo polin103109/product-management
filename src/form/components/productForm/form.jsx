@@ -1,6 +1,4 @@
-
 import { useState } from 'react';
-
 import Formgroup from '../formGroup/formGroup';
 import './form.css';
 import ProductTable from '../../../productTable/components/product-table';
@@ -17,23 +15,23 @@ function Form(){
 function handleFormSubmit(event){
     event.preventDefault();
   if (product.id.trim() === '' || product.name.trim() === '' || product.price.trim() === '') {
-    alert('Please fill out all fields');
+    console.log('Please fill out all fields');
     return;
   }
-
-    const checkEmptyInput = !Object.values(product).every(res=>res==="")
+  const checkEmptyInput = !Object.values(product).every(res=>res==="")
     if(checkEmptyInput){
       const newData = (data) => (
         [...data,product])
         setTableData(newData(tableData));
+        setProduct({ id: '', name: '', price: '' });
         // setTableData(newData );
-        const emptyInput = {
-          id:'',
-          name:"",
-          price:'',
-        }
+        // const emptyInput = {
+        //   id:'',
+        //   name:"",
+        //   price:'',
+        // }
         
-        setProduct(emptyInput )
+        // setProduct(emptyInput )
     }
     }
     

@@ -1,5 +1,5 @@
 .total-div{
-    display: flex;
+    /* display: flex; */
     /* border:2px solid black; */
     border-radius: 5px;
 }
@@ -25,7 +25,7 @@ justify-content: space-between;
     border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
-    margin-left: 20px;
+    margin-top: 20px;
 }
 p{
     text-align: center;
