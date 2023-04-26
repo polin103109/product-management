@@ -18,17 +18,17 @@ function handleFormSubmit(event){
     alert('Please fill out all fields');
     return;
   }
-// else{
-//   const duplicateId = tableData.find((data) => data.id === product.id);
-//   if (duplicateId) {
-//     alert(`Product with ID ${duplicateId.id} already exists`);
-//     return;
-//   }
-//   // if (tableData.some((data) => data.id === product.id)) {
-//   //    alert('ID is duplicate');
-//   //     return;
-//   //   }
-// }
+else{
+  const duplicateId = tableData.find((data) => data.id === product.id);
+  if (duplicateId) {
+    alert(`Product with ID ${duplicateId.id} already exists`);
+    return;
+  }
+  // if (tableData.some((data) => data.id === product.id)) {
+  //    alert('ID is duplicate');
+  //     return;
+  //   }
+}
 
   const checkEmptyInput = !Object.values(product).every(res=>res==="")
     if(checkEmptyInput){
