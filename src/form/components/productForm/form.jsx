@@ -15,9 +15,21 @@ function Form(){
 function handleFormSubmit(event){
     event.preventDefault();
   if (product.id.trim() === '' || product.name.trim() === '' || product.price.trim() === '') {
-    console.log('Please fill out all fields');
+    alert('Please fill out all fields');
     return;
   }
+// else{
+//   const duplicateId = tableData.find((data) => data.id === product.id);
+//   if (duplicateId) {
+//     alert(`Product with ID ${duplicateId.id} already exists`);
+//     return;
+//   }
+//   // if (tableData.some((data) => data.id === product.id)) {
+//   //    alert('ID is duplicate');
+//   //     return;
+//   //   }
+// }
+
   const checkEmptyInput = !Object.values(product).every(res=>res==="")
     if(checkEmptyInput){
       const newData = (data) => (
