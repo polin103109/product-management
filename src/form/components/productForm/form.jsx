@@ -46,7 +46,6 @@ function handleFormSubmit(event){
       const newInput = (data) => ({...data, [e.target.name]:e.target.value});
       setProduct(newInput(product));
     }
-
     return (
     <div className="total-div">
       <div className='form-container'>
